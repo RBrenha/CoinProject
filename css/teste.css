@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  overflow:hidden;
+  font-family:'montserrat';
+  background: radial-gradient(circle,#3a60a3,#182a59);
+}
+
+body.dark {
+  font-family:'montserrat';
+  background:  radial-gradient(circle,#1f1f1f,#000);
+}
+
+canvas {
+  width: 100%;
+  position:absolute;
+  z-index:1;
+}
+
+.bg-change {
+  position:absolute;
+  color:#000;
+  top:50px;
+  left:50px;
+  padding:20px;
+  background:transparent;
+  border-radius:5px;
+  border:1px solid #c1c1c1;
+  cursor:pointer;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: #fff;
+  font: 300 1rem/1.5 'montserrat', sans-serif;
+  margin: 0;
+  min-height: 100%;
+}
+
+.animation {
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+.animation--infinite {
+  animation-iteration-count: infinite;
+}
+.animation--up-down {
+  animation-name: upDown;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+.site__header {
+  left: 0;
+  cursor:pointer;
+  padding: 3rem 0;
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  transform: translateZ(0);
+  width: 100%;
+  z-index: 1;
+}
