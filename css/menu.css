@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Padding ajustado para cima e para a esquerda */
+    z-index: 2;
+}
+  
+  #nav-container{
+    display: flex;
+    align-items: center;
+  }
+  
+  /*toggle-icon*/
+  .toggle-icon {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: -2.2em auto 0 0.2em;
+    -webkit-transition: margin 600ms;
+    -moz-transition: margin 600ms;
+    transition: margin 600ms;
+    cursor: pointer;
+  }
+  
+  .toggle-icon .bar {
+    display: block;
+    width: 3.8em;
+    height: 0.2em;
+    margin: 0.9em;
+    border-right: 2.8em solid #fff;
+    border-left: 0.6em solid #d6d6d6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+    -moz-transition-property: -moz-transform, margin, border-right-color, box-shadow;
+    transition-property: transform, margin, border-right-color, box-shadow;
+    -webkit-transition-duration: 600ms;
+    -moz-transition-duration: 600ms;
+    transition-duration: 600ms;
+  }
+    .toggle-icon .bar:nth-of-type(1) {
+      -webkit-transition: opacity 300ms;
+      -moz-transition: opacity 300ms;
+      transition: opacity 300ms;
+    }
+    .toggle-icon .bar:nth-of-type(2) {
+      -webkit-transform: rotate(-180deg);
+      -moz-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+    }
+  
+  /*pushed*/
+  .pushed .toggle-icon {
+    margin: -3.2em 0 0 0.7em;
+  }
+  
+    .pushed .bar:nth-of-type(1) {
+      opacity: 0;
+    }
+  
+    .pushed .bar:nth-of-type(2) {
+      margin-left: 1.4em;
+      -webkit-transform: rotate(-137deg) translateY(-1.5em);
+      -moz-transform: rotate(-137deg) translateY(-1.5em);
+      -ms-transform: rotate(-137deg) translateY(-1.5em);
+      -o-transform: rotate(-137deg) translateY(-1.5em);
+      transform: rotate(-137deg) translateY(-1.5em);
+    }
+  
+    .pushed .bar:nth-of-type(3) {
+      margin-left: 0.5em;
+      -webkit-transform: rotate(-42deg);
+      -moz-transform: rotate(-42deg);
+      -ms-transform: rotate(-42deg);
+      -o-transform: rotate(-42deg);
+      transform: rotate(-42deg);
+    }
+  
+  
+  .pushed .toggle-icon:hover .bar:nth-of-type(2) {
+    border-right-color: #e9b8b9;
+    box-shadow: 0.4em 0 0.6em 0.1em rgba(205,40,44,0.75);
+  }
+  .pushed .toggle-icon:hover .bar:nth-of-type(3) {
+    border-right-color: #ddf1da;
+    box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65);
+  }
+
+/* Buttons Container */
+#buttons-container {
+    position: fixed;
+    top: -100px; /* Inicialmente fora da tela */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px; /* Espaço entre botões */
+    transition: top 0.5s ease; /* Animação suave */
+    z-index: 1;
+}
+
+#buttons-container.show {
+    top: 50px; /* Posição visível */
+}
+
+/* Button Styles */
+.wrap {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    line-height: 50px;
+    color: black;
+}
+
+/* Botão base */
+.btn-6 {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 150px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    margin: 10px;
+    line-height: 50px;
+    text-transform: uppercase;
+    border: 1px solid #000; /* Cor da borda */
+    color: #000; /* Cor inicial do texto */
+    border-radius: 50px; /* Cantos arredondados */
+    text-align: center;
+    background-color: #fff; /* Cor de fundo inicial */
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Adiciona o "span" para a animação */
+.btn-6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Começa fora à esquerda */
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* Fundo cinza escuro */
+    z-index: -1; /* Fica atrás do texto */
+    transition: left 0.5s ease; /* Animação suave */
+}
+
+/* Hover do botão */
+.btn-6:hover {
+    color: white;
+    background-color: #333; /* Texto branco no hover */
+    border-color: white;
+}
+
+/* Move o "span" para preencher o botão */
+.btn-6:hover::before {
+    left: 0; /* Desliza para cobrir o botão */
+}
+
+/* Estado ativo (clique) */
+.btn-6:active {
+    background-color: #333; /* Cor de fundo ao clicar */
+}
+
