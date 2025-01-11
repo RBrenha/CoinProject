@@ -106,71 +106,46 @@ header {
     display: flex;
     gap: 15px; /* Espaço entre botões */
     transition: top 0.5s ease; /* Animação suave */
-    z-index: 1;
+
 }
 
 #buttons-container.show {
     top: 50px; /* Posição visível */
 }
 
-/* Button Styles */
-.wrap {
-    display: inline-block;
-}
-
-a {
-    text-decoration: none;
-    line-height: 50px;
-    color: black;
+button {
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Garante que o link preencha toda a área */
+    width: 100%; /* Preenche a largura do botão */
+    height: 100%; /* Preenche a altura do botão */
 }
 
 /* Botão base */
 .btn-6 {
     position: relative;
-    display: inline-block;
-    overflow: hidden;
+    display: flex; /* Usar flexbox para alinhar conteúdo */
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
     width: 150px; /* Largura do botão */
     height: 50px; /* Altura do botão */
     margin: 10px;
-    line-height: 50px;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Texto em maiúsculas */
     border: 1px solid #000; /* Cor da borda */
     color: #000; /* Cor inicial do texto */
     border-radius: 50px; /* Cantos arredondados */
-    text-align: center;
-    background-color: #fff; /* Cor de fundo inicial */
+    background-color: #fff; /* Fundo branco inicial */
     cursor: pointer;
     font-family: Arial, sans-serif;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 14px; /* Tamanho do texto */
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box; /* Garante que padding/borda sejam incluídos */
 }
 
-/* Adiciona o "span" para a animação */
-.btn-6::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%; /* Começa fora à esquerda */
-    width: 100%;
-    height: 100%;
-    background-color: #333; /* Fundo cinza escuro */
-    z-index: -1; /* Fica atrás do texto */
-    transition: left 0.5s ease; /* Animação suave */
-}
-
-/* Hover do botão */
+/* Hover corrigido */
 .btn-6:hover {
-    color: white;
-    background-color: #333; /* Texto branco no hover */
-    border-color: white;
+    color: white; /* Texto branco no hover */
+    background-color: #333; /* Fundo cinza escuro no hover */
+    border-color: white; /* Borda branca no hover */
 }
 
-/* Move o "span" para preencher o botão */
-.btn-6:hover::before {
-    left: 0; /* Desliza para cobrir o botão */
-}
-
-/* Estado ativo (clique) */
-.btn-6:active {
-    background-color: #333; /* Cor de fundo ao clicar */
-}
 
