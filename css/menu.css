@@ -148,4 +148,20 @@ button {
     border-color: white; /* Borda branca no hover */
 }
 
+/* Botão de casa no canto superior direito */
+#home-button {
+  position: absolute;
+  top: 8px; /* Distância do topo */
+  right: 25px; /* Distância da borda direita */
+  font-size: 45px; /* Tamanho do ícone */
+  color: white; /* Cor do ícone */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para hover */
+  z-index: 3; /* Garante que esteja acima de outros elementos */
+}
 
+/* Efeito de hover no botão */
+#home-button:hover {
+  transform: scale(1.2); /* Expande o ícone ao passar o mouse */
+
+}

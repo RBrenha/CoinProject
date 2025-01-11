@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/particle.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/gifimage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -17,6 +19,9 @@
                 <span class="bar"></span>
             </div><!-- /toggle-icon -->
         </div><!-- /nav-container -->
+        <a href="index.html" id="home-button">
+            <i class="fas fa-home"></i>
+        </a>
     </header>
 
     <div id="particles-js"></div>
@@ -29,7 +34,29 @@
 
     <div id="model-container">
         <div id="circle">
-            <img src="path-to-your-gif.gif" alt="Looped GIF" />
+            <video autoplay loop muted playsinline>
+                <source src="imgs/GifCao.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+    <div id="model-container">
+        <div id="circle">
+            <video autoplay loop muted playsinline>
+                <source src="imgs/GifCao.mp4" type="video/mp4">
+            </video>
+        </div>
+        <h1 id="circle-title">Just a Shit Dog</h1>
+        <div class="middle">
+            <a class="btn" href="https://twitter.com/umarcbs">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="btn" href="#">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a class="btn" href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
     </div>
     
