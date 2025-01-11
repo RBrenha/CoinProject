@@ -13,13 +13,13 @@ header {
     z-index: 2;
 }
   
-  #nav-container{
+#nav-container {
     display: flex;
     align-items: center;
-  }
-  
-  /*toggle-icon*/
-  .toggle-icon {
+}
+
+/* toggle-icon */
+.toggle-icon {
     display: block;
     position: relative;
     width: 100%;
@@ -28,9 +28,9 @@ header {
     -moz-transition: margin 600ms;
     transition: margin 600ms;
     cursor: pointer;
-  }
-  
-  .toggle-icon .bar {
+}
+
+.toggle-icon .bar {
     display: block;
     width: 3.8em;
     height: 0.2em;
@@ -46,73 +46,74 @@ header {
     -webkit-transition-duration: 600ms;
     -moz-transition-duration: 600ms;
     transition-duration: 600ms;
-  }
-    .toggle-icon .bar:nth-of-type(1) {
-      -webkit-transition: opacity 300ms;
-      -moz-transition: opacity 300ms;
-      transition: opacity 300ms;
-    }
-    .toggle-icon .bar:nth-of-type(2) {
-      -webkit-transform: rotate(-180deg);
-      -moz-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-      -o-transform: rotate(-180deg);
-      transform: rotate(-180deg);
-    }
-  
-  /*pushed*/
-  .pushed .toggle-icon {
+}
+.toggle-icon .bar:nth-of-type(1) {
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+    transition: opacity 300ms;
+}
+.toggle-icon .bar:nth-of-type(2) {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+/* pushed */
+.pushed .toggle-icon {
     margin: -3.2em 0 0 0.7em;
-  }
-  
-    .pushed .bar:nth-of-type(1) {
-      opacity: 0;
-    }
-  
-    .pushed .bar:nth-of-type(2) {
-      margin-left: 1.4em;
-      -webkit-transform: rotate(-137deg) translateY(-1.5em);
-      -moz-transform: rotate(-137deg) translateY(-1.5em);
-      -ms-transform: rotate(-137deg) translateY(-1.5em);
-      -o-transform: rotate(-137deg) translateY(-1.5em);
-      transform: rotate(-137deg) translateY(-1.5em);
-    }
-  
-    .pushed .bar:nth-of-type(3) {
-      margin-left: 0.5em;
-      -webkit-transform: rotate(-42deg);
-      -moz-transform: rotate(-42deg);
-      -ms-transform: rotate(-42deg);
-      -o-transform: rotate(-42deg);
-      transform: rotate(-42deg);
-    }
-  
-  
-  .pushed .toggle-icon:hover .bar:nth-of-type(2) {
+}
+
+.pushed .bar:nth-of-type(1) {
+    opacity: 0;
+}
+
+.pushed .bar:nth-of-type(2) {
+    margin-left: 1.4em;
+    -webkit-transform: rotate(-137deg) translateY(-1.5em);
+    -moz-transform: rotate(-137deg) translateY(-1.5em);
+    -ms-transform: rotate(-137deg) translateY(-1.5em);
+    -o-transform: rotate(-137deg) translateY(-1.5em);
+    transform: rotate(-137deg) translateY(-1.5em);
+}
+
+.pushed .bar:nth-of-type(3) {
+    margin-left: 0.5em;
+    -webkit-transform: rotate(-42deg);
+    -moz-transform: rotate(-42deg);
+    -ms-transform: rotate(-42deg);
+    -o-transform: rotate(-42deg);
+    transform: rotate(-42deg);
+}
+
+.pushed .toggle-icon:hover .bar:nth-of-type(2) {
     border-right-color: #e9b8b9;
     box-shadow: 0.4em 0 0.6em 0.1em rgba(205,40,44,0.75);
-  }
-  .pushed .toggle-icon:hover .bar:nth-of-type(3) {
+}
+.pushed .toggle-icon:hover .bar:nth-of-type(3) {
     border-right-color: #ddf1da;
     box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65);
-  }
+}
 
 /* Buttons Container */
 #buttons-container {
-    position: fixed;
-    top: -100px; /* Inicialmente fora da tela */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 15px; /* Espaço entre botões */
-    transition: top 0.5s ease; /* Animação suave */
-
+  position: fixed;
+  top: 50px; /* Posição inicial */
+  left: 50%;
+  transform: translate(-50%, -50px); /* Fora da tela por padrão */
+  opacity: 0; /* Invisível por padrão */
+  display: flex;
+  gap: 15px; /* Espaço entre os botões */
+  transition: all 0.5s ease; /* Transição suave para animações */
+  z-index: -1; /* Mantém atrás quando oculto */
 }
 
 #buttons-container.show {
-    top: 50px; /* Posição visível */
+  transform: translate(-50%, 0); /* Volta para a posição original */
+  opacity: 1; /* Torna visível */
+  z-index: 30; /* Traz os botões para frente */
 }
-
 button {
     text-decoration: none; /* Remove sublinhado */
     display: block; /* Garante que o link preencha toda a área */
@@ -122,46 +123,51 @@ button {
 
 /* Botão base */
 .btn-6 {
-    position: relative;
-    display: flex; /* Usar flexbox para alinhar conteúdo */
-    justify-content: center; /* Centralizar horizontalmente */
-    align-items: center; /* Centralizar verticalmente */
-    width: 150px; /* Largura do botão */
-    height: 50px; /* Altura do botão */
-    margin: 10px;
-    text-transform: uppercase; /* Texto em maiúsculas */
-    border: 1px solid #000; /* Cor da borda */
-    color: #000; /* Cor inicial do texto */
-    border-radius: 50px; /* Cantos arredondados */
-    background-color: #fff; /* Fundo branco inicial */
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: 14px; /* Tamanho do texto */
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-    box-sizing: border-box; /* Garante que padding/borda sejam incluídos */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 50px;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 /* Hover corrigido */
 .btn-6:hover {
-    color: white; /* Texto branco no hover */
-    background-color: #333; /* Fundo cinza escuro no hover */
-    border-color: white; /* Borda branca no hover */
+  color: white;
+  background-color: #333;
+  border-color: white;
 }
 
 /* Botão de casa no canto superior direito */
 #home-button {
-  position: absolute;
-  top: 8px; /* Distância do topo */
-  right: 25px; /* Distância da borda direita */
-  font-size: 45px; /* Tamanho do ícone */
-  color: white; /* Cor do ícone */
-  text-decoration: none; /* Remove o sublinhado */
-  transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para hover */
-  z-index: 3; /* Garante que esteja acima de outros elementos */
+    position: absolute;
+    top: 8px; /* Distância do topo */
+    right: 25px; /* Distância da borda direita */
+    font-size: 45px; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para hover */
+    z-index: 3; /* Garante que esteja acima de outros elementos */
 }
 
-/* Efeito de hover no botão */
 #home-button:hover {
   transform: scale(1.2); /* Expande o ícone ao passar o mouse */
 
+}
+
+/* Estilo responsivo para telas pequenas */
+@media screen and (max-width: 768px) {
+  #buttons-container {
+      flex-direction: column; /* Empilha os botões no mobile */
+  }
 }

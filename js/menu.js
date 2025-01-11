@@ -5,14 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (toggleIcon && navContainer && buttonsContainer) {
         toggleIcon.addEventListener("click", function () {
-            // Toggle the class 'pushed' for the hamburger animation
+            // Alterna a classe 'pushed' para a animação do menu
             navContainer.classList.toggle("pushed");
 
-            // Toggle the class 'show' for the buttons
+            // Alterna a classe 'show' para exibir ou ocultar os botões
             buttonsContainer.classList.toggle("show");
         });
     } else {
-        console.error("Menu or buttons container not found in DOM");
+        console.error("Menu ou container de botões não encontrado no DOM");
     }
 });
-

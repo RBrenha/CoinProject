@@ -2,6 +2,8 @@
 body {
     margin: 0;
     font: normal 75% Arial, Helvetica, sans-serif;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-y: auto; /* Garante rolagem vertical */
   }
   /* ---- particles.js container ---- */
   #particles-js {
@@ -9,7 +11,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: #000000;
-    background-image: url("https://www.elsetge.cat/myimg/f/30-309104_classic-retrowave-skyline-wallpaper-1920-x-retro-synthwave.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
