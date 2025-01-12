@@ -10,7 +10,7 @@ header {
     display: flex;
     align-items: center;
     padding: 5px; /* Padding ajustado para cima e para a esquerda */
-    z-index: 2;
+    z-index: 100;
 }
   
 #nav-container {
@@ -112,7 +112,7 @@ header {
 #buttons-container.show {
   transform: translate(-50%, 0); /* Volta para a posição original */
   opacity: 1; /* Torna visível */
-  z-index: 30; /* Traz os botões para frente */
+  z-index: 100; /* Traz os botões para frente */
 }
 button {
     text-decoration: none; /* Remove sublinhado */

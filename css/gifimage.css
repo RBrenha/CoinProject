@@ -3,6 +3,36 @@
     src: url('fonts/custom-font.ttf') format('truetype');
 }
 
+.mais {
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: flex;
+    padding: 20px;
+    background: #6f6f6f;
+
+}
+.about-us-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme necessário */
+    gap: 400px;
+}
+
+.espaco{
+    padding: 60px;
+    background: #000000;
+}
+
+.esquerda {
+    text-align: left;
+}
+
+.direita {
+    text-align: right;
+}
+
+
 /* Contêiner do círculo */
 #model-container {
     position: fixed;
