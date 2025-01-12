@@ -263,24 +263,33 @@ html {
 }
 
 .button-container {
-    text-align: center; /* Centraliza o botão */
-    margin-top: 20px; /* Espaço entre a imagem e o botão */
+    display: flex; /* Flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Alinha o botão em uma coluna */
+    background-color: #121212;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .buy-now-btn {
     display: inline-block;
-    background-color: #ff4c4c; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto */
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
     text-decoration: none;
-    font-size: 20px;
-    padding: 15px 30px;
+    font-size: 25px;
+    padding: 15px 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .buy-now-btn:hover {
-    background-color: #e63e3e; /* Cor mais escura no hover */
+    background-color: #757575; /* Cor mais escura no hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
 }
+
+
