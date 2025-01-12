@@ -4,7 +4,7 @@ body {
     font: normal 75% Arial, Helvetica, sans-serif;
     overflow-x: hidden; /* Evita rolagem horizontal */
     overflow-y: auto; /* Garante rolagem vertical */
-  }
+}
   /* ---- particles.js container ---- */
   #particles-js {
     position: absolute;
