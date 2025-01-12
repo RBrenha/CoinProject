@@ -255,44 +255,9 @@ html {
     color: #dddddd;
 }
 
-/* Why Us Section */
-.why-us-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #f7f7f7;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.why-us-image-container {
-    margin-bottom: 30px;
-}
-
-.why-us-image {
-    max-width: 80%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-us-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.why-us-text-container h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-family: 'Orbitron', sans-serif;
-    color: #333;
-}
-
-.why-us-text-container p {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #555;
-    line-height: 1.6;
+.custom-hrr {
+    border: 0;
+    height: 2px;
+    background: #ffffff; /* Cor branca */
+    margin: 40px 0; /* Espaçamento vertical */
 }
