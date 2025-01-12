@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const countdownElement = document.getElementById("countdown");
     const buyButton = document.getElementById("buy-button");
 
-    // Definir a data alvo (7 de fevereiro de 2025)
-    const targetDate = new Date(Date.UTC(2025, 1, 7, 0, 0, 0)); // Mês em JavaScript começa no índice 0
+    // Definir a data alvo (20 de janeiro de 2025)
+    const targetDate = new Date(Date.UTC(2025, 0, 20, 0, 0, 0)); // Mês em JavaScript começa no índice 0
 
     function updateCountdown() {
         const now = new Date();
