@@ -1,28 +1,37 @@
-    document.addEventListener("DOMContentLoaded", function () {
-        const countdownElement = document.getElementById("countdown");
+document.addEventListener("DOMContentLoaded", function () {
+    const countdownElement = document.getElementById("countdown");
+    const buyButton = document.getElementById("buy-button");
 
-        // Definir a data alvo (7 de fevereiro de 2025)
-        const targetDate = new Date(Date.UTC(2025, 1, 7, 0, 0, 0)); // Mês em JavaScript começa no índice 0
+    // Definir a data alvo (7 de fevereiro de 2025)
+    const targetDate = new Date(Date.UTC(2025, 1, 7, 0, 0, 0)); // Mês em JavaScript começa no índice 0
 
-        function updateCountdown() {
-            const now = new Date();
-            const utcNow = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
-            const timeRemaining = targetDate - utcNow;
+    function updateCountdown() {
+        const now = new Date();
+        const utcNow = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
+        const timeRemaining = targetDate - utcNow;
 
-            if (timeRemaining <= 0) {
-                countdownElement.innerHTML = "The time has come!";
-                return;
-            }
-
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        // Se o tempo restante for menor ou igual a 0
+        if (timeRemaining <= 0) {
+            countdownElement.innerHTML = "The time has come!";
+            buyButton.disabled = false; // Ativa o botão
+            buyButton.classList.add("enabled"); // Adiciona classe para estilo ativo
+            buyButton.addEventListener("click", () => {
+                alert("Now you can buy $SHITDOG!");
+            });
+            return;
         }
 
-        // Atualiza o countdown a cada segundo
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    });
+        // Calcula dias, horas, minutos e segundos restantes
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Atualiza o texto do countdown
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Atualiza o countdown a cada segundo
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+});
