@@ -307,3 +307,116 @@ html {
     border-radius: 15px; /* Cantos arredondados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra ao redor do vídeo */
 }
+
+.roadmap-section {
+    background-color: #1c1c1c; /* Fundo escuro */
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.roadmap-title {
+    font-size: 36px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.roadmap-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.roadmap-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.roadmap-item {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.roadmap-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4c4c;
+    margin-bottom: 10px;
+}
+
+.roadmap-description h3 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.roadmap-description p {
+    font-size: 16px;
+    margin: 0;
+    color: #ddd;
+}
+
+.roadmap-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.site-footer {
+    background-color: #000000; /* Fundo escuro */
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo-img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 40px;
+}
+
+.footer-content {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ddd;
+}
+
+.footer-social {
+    flex: 1;
+    text-align: center;
+}
+
+.social-link {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.2); /* Pequeno zoom no hover */
+    color: #ff4c4c; /* Vermelho destacado no hover */
+}
