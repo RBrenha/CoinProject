@@ -293,3 +293,17 @@ html {
 }
 
 
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Fundo escuro */
+    padding: 20px;
+}
+
+.video-loop {
+    max-width: 90%; /* Ajusta o tamanho do vídeo */
+    height: auto;
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra ao redor do vídeo */
+}
