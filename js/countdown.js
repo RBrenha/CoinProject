@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const buyButton = document.getElementById("buy-button");
 
     // Definir a data alvo (20 de janeiro de 2025, às 05:00 UTC)
-    const targetDate = new Date(Date.UTC(2025, 0, 20, 5, 0, 0)); // Janeiro é mês 0 em JavaScript
+    const targetDate = new Date(Date.UTC(2025, 0, 10, 5, 0, 0)); // Janeiro é mês 0 em JavaScript
 
     function updateCountdown() {
         const now = new Date();
@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             buyButton.disabled = false; // Ativa o botão
             buyButton.classList.add("enabled"); // Adiciona classe para estilo ativo
             buyButton.addEventListener("click", () => {
-                alert("Now you can buy $SHITDOG!");
+                // Redireciona para o site
+                window.location.href = "https://pump.fun";
             });
             return;
         }
