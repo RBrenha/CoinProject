@@ -1,0 +1,22 @@
+body
+{
+background-color: black;
+}
+ 
+ /* Título antes da pirâmide */
+ .pyramid-title {
+    font-size: 80px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin: 40px 0;
+}
+
+/* Estilo para as linhas horizontais */
+hr {
+    border: none;
+    border-top: 2px solid white; /* Linha branca */
+    margin: 20px auto;
+    width: 80%; /* Ajuste da largura */
+}
+
