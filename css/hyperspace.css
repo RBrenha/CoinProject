@@ -27,7 +27,6 @@
     perspective: 5px;
     perspective-origin: 50% 50%;
     position: relative;
-    z-index: -10;
   }
   
   .wrap{
