@@ -32,7 +32,6 @@
     text-align: right;
 }
 
-
 /* Contêiner do círculo */
 #model-container {
     position: fixed;
@@ -242,5 +241,32 @@
         line-height: 60px;
         font-size: 18px;
     }
+
+    /* correcoes */
+
+    .mais {
+        height: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: flex;
+        padding: 0px;
+        background: #6f6f6f;
+        z-index: -200;
+    
+    }
+    .about-us-container {
+        display: flex;
+        width: 100%;
+        max-width: 0px; /* Ajuste conforme necessário */
+        gap: 0px;
+        z-index: -200;
+    }
+    
+    .espaco{
+        padding: 0px;
+        background: #ffffff;
+        z-index: -200;
+    }
+
 }
 
