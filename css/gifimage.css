@@ -205,13 +205,13 @@
     }
 
     .btn {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
     }
 
     .btn i {
-        line-height: 70px;
-        font-size: 22px;
+        line-height: 90px;
+        font-size: 26px;
     }
 }
 
@@ -236,8 +236,8 @@
     }
 
     .btn {
-        width: 60px;
-        height: 60px;
+        width: 90px;
+        height: 90px;
     }
 
     .btn i {
