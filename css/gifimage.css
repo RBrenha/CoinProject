@@ -273,3 +273,16 @@
 
 }
 
+/* Para telas com altura menor que 480px */
+@media (max-height: 700px) {
+    #model-container {
+        transform: scale(0.7) translateX(-70%) translateY(-20%);
+    }
+
+    #circle {
+        width: 500px;
+        height: 500px;
+    }
+
+    
+}
