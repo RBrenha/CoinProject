@@ -168,7 +168,7 @@ body {
 
 /* Estilo para a imagem do menu */
 .menu-image-container {
-    margin-top: 20px; /* Espaço acima da imagem */
+    margin-top: 30px; /* Espaço acima da imagem */
     text-align: center;
 }
 
@@ -178,12 +178,13 @@ body {
     height: auto; /* Mantém a proporção */
     border-radius: 15px; /* Cantos arredondados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Transição suave */
 }
 
 /* Efeito de hover */
 .menu-image:hover {
-    transform: scale(1.05); /* Ampliação ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
+    transform: scale(1.1); /* Ampliação ao passar o mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Sombra mais pronunciada */
 }
 
 
