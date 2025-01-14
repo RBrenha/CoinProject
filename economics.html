@@ -103,14 +103,14 @@
             <!-- Circulating Supply Card -->
             <div class="card">
                 <h2 class="card-title">📊 Circulating Supply</h2>
-                <p class="card-value">700,000,000 TOKENS</p>
+                <p class="card-value">838,000,000 TOKENS</p>
                 <p class="card-description">Currently available in the market.</p>
             </div>
     
             <!-- Burned Tokens Card -->
             <div class="card">
                 <h2 class="card-title">🔥 Burned Tokens</h2>
-                <p class="card-value">150,000,000 TOKENS</p>
+                <p class="card-value">??????? TOKENS</p>
                 <p class="card-description">Tokens permanently removed from supply.</p>
             </div>
         </div>
@@ -119,15 +119,24 @@
         <div class="allocation-container">
             <h2 class="allocation-title">Token Allocation</h2>
             <div class="progress-bar">
-                <div class="progress-fill team" style="width: 20%;">Team 20%</div>
-                <div class="progress-fill community" style="width: 50%;">Community 50%</div>
-                <div class="progress-fill liquidity" style="width: 30%;">Liquidity 30%</div>
-            </div>
+                <div class="progress-fill team" style="width: 20%;">
+                    <span>Team 15%</span>
+                </div>
+                <div class="progress-fill dev-holding" style="width: 20%;">
+                    <span>Dev Holding 0.7%</span>
+                </div>
+                <div class="progress-fill community" style="width: 40%;">
+                    <span>Community 83.8%</span>
+                </div>
+                <div class="progress-fill liquidity" style="width: 20%;">
+                    <span>Liquidity 0.5%</span>
+                </div>
+            </div>            
         </div>
     </div>
     
     <div class="charts-container" id="grafics">
-        <h1 class="charts-title">📊 Interactive Charts</h1>
+        <h1 class="charts-title">📊 $SHITDOG Charts</h1>
         <p class="charts-description">Explore detailed insights about the token's economics and performance through interactive charts.</p>
         
         <!-- Gráfico de Pizza -->
@@ -138,13 +147,13 @@
     
         <!-- Gráfico de Linha -->
         <div class="chart-box">
-            <h2 class="chart-title">Price Evolution</h2>
-            <canvas id="priceChart"></canvas>
-        </div>
+            <h2 class="chart-title">Market Cap Evolution Prediction</h2>
+            <canvas id="marketCapChart"></canvas>
+        </div>        
     
         <!-- Gráfico de Barras -->
         <div class="chart-box">
-            <h2 class="chart-title">Monthly Transactions</h2>
+            <h2 class="chart-title">Monthly Transactions Prediction</h2>
             <canvas id="transactionsChart"></canvas>
         </div>
     </div>

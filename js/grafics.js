@@ -2,10 +2,10 @@
 const allocationChart = new Chart(document.getElementById('allocationChart'), {
     type: 'pie',
     data: {
-        labels: ['Community', 'Team', 'Liquidity', 'Marketing'],
+        labels: ['Community', 'Team', 'Liquidity', 'Dev Holding'],
         datasets: [{
-            data: [50, 20, 20, 10],
-            backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#ffc107'],
+            data: [83.8, 15, 0.5, 0.7],
+            backgroundColor: ['#2196f3', '#4caf50', '#ff5722', '#ffc107'],
             borderColor: '#1a1a1a',
             borderWidth: 2
         }]
@@ -25,14 +25,13 @@ const allocationChart = new Chart(document.getElementById('allocationChart'), {
     }
 });
 
-// Gráfico de Linha (Price Evolution)
-const priceChart = new Chart(document.getElementById('priceChart'), {
+const marketCapChart = new Chart(document.getElementById('marketCapChart'), {
     type: 'line',
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
         datasets: [{
-            label: 'Price (USD)',
-            data: [0.10, 0.15, 0.20, 0.25, 0.22, 0.30, 0.35],
+            label: 'Market Cap (USD)',
+            data: [0, 150000, 100000, 90000, 95000, 80000, 70000, 76000],
             backgroundColor: 'rgba(33, 150, 243, 0.2)',
             borderColor: '#2196f3',
             borderWidth: 2,
@@ -45,7 +44,17 @@ const priceChart = new Chart(document.getElementById('priceChart'), {
             tooltip: {
                 callbacks: {
                     label: function(tooltipItem) {
-                        return `Price: $${tooltipItem.raw}`;
+                        return `Market Cap: $${tooltipItem.raw.toLocaleString()}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    callback: function(value) {
+                        return `$${value.toLocaleString()}`; // Exibe valores com separadores de milhar
                     }
                 }
             }
@@ -60,7 +69,7 @@ const transactionsChart = new Chart(document.getElementById('transactionsChart')
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
         datasets: [{
             label: 'Transactions',
-            data: [5000, 8000, 7000, 10000, 9500, 12000, 15000],
+            data: [3000, 5000, 4000, 3500, 3750, 3000, 2500, 2700], // Baseado no Market Cap
             backgroundColor: '#ff5722',
             borderColor: '#1a1a1a',
             borderWidth: 2

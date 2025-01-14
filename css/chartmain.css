@@ -273,6 +273,7 @@ html {
     width: 100%;
     display: flex;
     overflow: hidden;
+    position: relative; /* Necessário para textos ajustados fora da barra */
 }
 
 .progress-fill {
@@ -283,10 +284,20 @@ html {
     align-items: center;
     justify-content: center;
     border-right: 1px solid #1a1a1a;
+    position: relative;
+}
+
+.progress-fill span {
+    white-space: nowrap;
+    padding: 0 5px; /* Espaço ao redor do texto */
 }
 
 .progress-fill.team {
     background-color: #4caf50;
+}
+
+.progress-fill.dev-holding {
+    background-color: #ff9800; /* Nova cor para Dev Holding */
 }
 
 .progress-fill.community {
@@ -295,6 +306,27 @@ html {
 
 .progress-fill.liquidity {
     background-color: #ff5722;
+}
+
+/* Estilo para texto fora da barra para segmentos pequenos */
+.progress-fill span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.progress-fill span::before {
+    content: '';
+}
+
+.progress-fill span {
+    /* Texto aparece fora da barra para segmentos pequenos */
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Container Geral */
