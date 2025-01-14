@@ -2,6 +2,10 @@ body {
     background-color: black;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Estilização do contêiner da pirâmide */
 .pyramid-container {
     display: flex;
@@ -339,6 +343,132 @@ canvas {
     height: auto;
 }
 
+/* Container Geral */
+.blockchain-container {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Cabeçalho */
+.blockchain-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.blockchain-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.blockchain-title {
+    font-size: 24px;
+    color: #ccc;
+}
+
+/* Token Address */
+.token-address-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.token-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.token-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+.token-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding-right: 10px;
+    outline: none;
+}
+
+.copy-btn {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 5px; /* Menor espaço interno */
+    border-radius: 3px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 12px; /* Tamanho menor do texto ou ícone */
+    width: 30px; /* Largura menor */
+    height: 30px; /* Altura menor */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+.copy-btn:hover {
+    background: #555;
+}
+
+/* Info Cards */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-card {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #444;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+    background-color: #2a2a2a;
+}
+
+.card-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card-status {
+    font-size: 18px;
+    color: #4caf50;
+    margin-top: 10px;
+}
+
+/* Última Verificação */
+.last-verified {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 12px;
+}
 
 
 

@@ -74,9 +74,9 @@
     <div class="menu-container">
         <h2 class="menu-title">Menu</h2>
         <div class="menu-buttons">
-            <a href="#about-us" class="menu-btn">blank</a>
-            <a href="#inspiration" class="menu-btn">blank</a>
-            <a href="#whyus" class="menu-btn">blank</a>
+            <a href="#Information" class="menu-btn">Information</a>
+            <a href="#grafics" class="menu-btn">Charts</a>
+            <a href="#blockinfo" class="menu-btn">BlockChain Information</a>
             <a href="#buyssales" class="menu-btn">blank</a>
             <a href="#roadmap" class="menu-btn">blank</a>
         </div>
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <div class="economics-container">
+    <div class="economics-container" id="Information">
         <h1 class="economics-title">💰 Token Economics</h1>
         <p class="economics-description">
             Discover the economic framework behind our token. Transparent, fair, and community-driven.
@@ -126,7 +126,7 @@
         </div>
     </div>
     
-    <div class="charts-container">
+    <div class="charts-container" id="grafics">
         <h1 class="charts-title">📊 Interactive Charts</h1>
         <p class="charts-description">Explore detailed insights about the token's economics and performance through interactive charts.</p>
         
@@ -149,6 +149,47 @@
         </div>
     </div>
     
+    <div class="blockchain-container" id="blockinfo">
+        <div class="blockchain-header">
+            <img src="imgs/solanalogos.png" alt="Blockchain Logo" class="blockchain-logo">
+            <h2 class="blockchain-title">Blockchain Information</h2>
+        </div>
+        <div class="token-address-container">
+            <span class="token-label">Token Address</span>
+            <div class="token-box">
+                <input type="text" value="no token" readonly>
+                <button class="copy-btn" onclick="copyTokenAddress()">📋</button>
+            </div>
+        </div>
+        <div class="info-cards">
+            <div class="info-card">
+                <span class="card-icon">🔒</span>
+                <h3>Contract Revoked</h3>
+                <span class="card-status">✔</span>
+            </div>
+            <div class="info-card">
+                <span class="card-icon">🔑</span>
+                <h3>Mint Authority Disabled</h3>
+                <span class="card-status">✔</span>
+            </div>
+            <div class="info-card">
+                <span class="card-icon">🛡</span>
+                <h3>Freeze Authority Disabled</h3>
+                <span class="card-status">✔</span>
+            </div>
+            <div class="info-card">
+                <span class="card-icon">📜</span>
+                <h3>Metadata Immutable</h3>
+                <span class="card-status">✔</span>
+            </div>
+        </div>
+        <div class="last-verified">
+            <span>Last verified: Just now</span>
+        </div>
+    </div>
+    
+
+
 
 
 
@@ -184,4 +225,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/grafics.js"></script>
+    <script src="js/tokenclick.js"></script>
 </html>

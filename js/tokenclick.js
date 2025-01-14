@@ -1,8 +1,6 @@
-document.getElementById('copy-btn').addEventListener('click', function () {
-    const tokenText = document.getElementById('token-address').innerText;
-    navigator.clipboard.writeText(tokenText).then(() => {
-        alert('Token copied to clipboard!');
-    }).catch(() => {
-        alert('Failed to copy token!');
-    });
-});
+function copyTokenAddress() {
+    const tokenInput = document.querySelector('.token-box input');
+    tokenInput.select();
+    document.execCommand('copy');
+    alert('Token address copied to clipboard!');
+}
