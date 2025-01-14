@@ -1,3 +1,7 @@
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+
+/* Reset básico e estilos globais */
 html,
 body {
   width: 100%;
@@ -10,70 +14,78 @@ body {
   margin: 0;
 }
 
-.starwars section {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  z-index: 1;
+/* Início do nosso Star Wars crawl */
+.starwars {
+  /* Todos os <section> dentro da .starwars */
+  section {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index: 1;
+  }
+
+  /* Parte inicial - o botão "Start" */
+  .start {
+    font-size: 200%;
+    width: 14em;                /* $start-width = 14em */
+    margin: -4em 0 0 -7em;      /* metade de 14em = 7em */
+    text-align: center;
+    cursor: pointer;
+  }
+  .start span {
+    color: rgb(75, 213, 238);
+  }
+
+  /* Texto "A long time ago..." */
+  .intro {
+    width: 15em;                /* $intro-width = 15em */
+    margin: 0 0 0 -7.5em;       /* metade de 15em = 7.5em */
+    font-size: 200%;
+    font-weight: 400;
+    color: rgb(75, 213, 238);
+    opacity: 0;
+    animation: intro 6s ease-out 1s;
+    /* O animation acima = 
+       nomeDaAnimacao tempoFuncaoDeAnimação delay */
+  }
+
+  /* Logo do Star Wars (SVG) */
+  .logo {
+    opacity: 0;
+    animation: logo 9s ease-out 9s; /* Duração 9s, começa após 9s */
+  }
+  .logo svg {
+    width: inherit;
+  }
+
+  /* Texto rolando (titles) */
+  .titles {
+    width: 14.65em;             /* $titles-width = 14.65em */
+    margin: 0 0 0 -7.325em;     /* metade de 14.65em ~ 7.325em */
+    top: auto;
+    bottom: 0;
+    height: 50em;
+    font-size: 350%;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    /* perspective(300px) rotateX(25deg) */
+    transform: perspective(300px) rotateX(25deg);
+  }
+  .titles > div {
+    position: absolute;
+    top: 100%;
+    animation: titles 81s linear 13s; 
+    /* rola 81s, começa após 13s */
+  }
+  .titles > div > p {
+    margin: 1.35em 0 1.85em 0;
+    line-height: 1.35em;
+    backface-visibility: hidden;
+  }
 }
 
-.starwars .start {
-  font-size: 200%;
-  width: 14em;
-  margin: -4em 0 0 -7em;
-  text-align: center;
-  cursor: pointer;
-}
-
-.starwars .start span {
-  color: rgb(75, 213, 238);
-}
-
-.starwars .intro {
-  width: 15em;
-  margin: 0 0 0 -7.5em;
-  font-size: 200%;
-  font-weight: 400;
-  color: rgb(75, 213, 238);
-  opacity: 0;
-  animation: intro 6s ease-out 1s;
-}
-
-.starwars .logo {
-  opacity: 0;
-  animation: logo 9s ease-out 9s;
-}
-
-.starwars .logo svg {
-  width: inherit;
-}
-
-.starwars .titles {
-  width: 14.65em;
-  margin: 0 0 0 -7.325em;
-  top: auto;
-  bottom: 0;
-  height: 50em;
-  font-size: 350%;
-  text-align: justify;
-  overflow: hidden;
-  transform-origin: 50% 100%;
-  perspective: 300px;
-  transform: rotateX(25deg);
-}
-
-.starwars .titles > div {
-  position: absolute;
-  top: 100%;
-  animation: titles 81s linear 13s;
-}
-
-.starwars .titles > div > p {
-  margin: 1.35em 0 1.85em 0;
-  line-height: 1.35em;
-  backface-visibility: hidden;
-}
-
+/* Animações em keyframes */
 @keyframes intro {
   0% {
     opacity: 0;
@@ -91,15 +103,15 @@ body {
 
 @keyframes logo {
   0% {
-    width: 18em;
-    margin: -9em 0 0 -9em;
+    width: 18em; /* $logo-width = 18em */
+    margin: -9em 0 0 -9em; /* metade de 18em = 9em */
     transform: scale(2.75);
     opacity: 1;
   }
   50% {
-    opacity: 1;
     width: 18em;
     margin: -9em 0 0 -9em;
+    opacity: 1;
   }
   100% {
     transform: scale(0.1);
@@ -120,5 +132,48 @@ body {
   100% {
     top: 20%;
     opacity: 0;
+  }
+}
+
+/* TELAS MÉDIAS (até ~900px) */
+@media (max-width: 900px) {
+  .starwars .start {
+    font-size: 180%;
+    width: 12em;
+    margin: -3.5em 0 0 -6em;
+  }
+  .starwars .intro {
+    width: 13em;
+    margin: 0 0 0 -6.5em;
+    font-size: 180%;
+  }
+  .starwars .titles {
+    width: 13em;
+    margin: 0 0 0 -6.5em;
+    font-size: 300%;
+  }
+}
+
+/* TELAS PEQUENAS (até ~600px) */
+@media (max-width: 600px) {
+  .starwars .start {
+    font-size: 150%;
+    width: 10em;
+    margin: -3em 0 0 -5em;
+  }
+  .starwars .intro {
+    width: 10em;
+    margin: 0 0 0 -5em;
+    font-size: 150%;
+  }
+  .starwars .titles {
+    width: 10em;
+    margin: 0 0 0 -5em;
+    font-size: 250%;
+  }
+  .starwars .logo {
+    /* Exemplo de ajuste do logo em telas menores */
+    animation: logo 9s ease-out 9s;
+    /* Podem ser feitos ajustes adicionais */
   }
 }
