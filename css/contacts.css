@@ -7,9 +7,9 @@
     z-index: 10; /* Certifica-se de que esteja acima do fundo */
     width: 200px;
     height: 200px;
-    margin-top: 0px; /* Adiciona margem superior */
 }
 
+/* Vídeo circular */
 #circle {
     width: 100%;
     height: 100%;
@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente */
-    border: 2px solid black; /* Borda preta de 2px */
+    border: 2px solid black; /* Borda preta */
 }
 
 #circle video {
@@ -28,41 +28,23 @@
     object-fit: cover;
 }
 
-/* Vídeo centralizado abaixo */
-.centered-video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px; /* Adiciona margem superior */
-    z-index: 5; /* Certifica-se de que não fique acima do círculo */
-}
-
-.centered-video-container video {
-    width: 300px;
-    height: auto;
-    border-radius: 15px; /* Cantos arredondados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    border: 2px solid black; /* Borda preta de 2px */
-}
-
-/* Contêiner central para o texto */
+/* Título abaixo do vídeo */
 .circle-title-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Alinha itens verticalmente */
-    margin-top: 1px; /* Espaço entre o vídeo e o título */
+    margin-top: 10px;
 }
 
-/* Título abaixo do círculo de vídeo */
 .circle-title {
-    font-size: 50px; /* Tamanho da fonte ajustado */
+    font-size: 50px;
     text-align: center;
-    color: white; /* Cor branca */
-    font-family: 'Orbitron', sans-serif; /* Fonte Orbitron */
-    text-transform: uppercase; /* Texto em letras maiúsculas */
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
     font-weight: 900;
-    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+    line-height: 1.2;
 }
 
 /* Redes sociais */
@@ -71,6 +53,7 @@
     justify-content: center;
     margin-top: 20px;
     gap: 15px;
+    flex-wrap: wrap; /* Permite quebra em linhas no mobile */
 }
 
 .social-btn {
@@ -80,25 +63,28 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 16px; /* Ajuste proporcional do texto */
     color: white;
     transition: all 0.3s ease;
     text-decoration: none;
     background: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente */
+    text-align: center;
 }
 
+/* Cores específicas */
 .social-btn.telegram {
-    background: #0088cc; /* Azul do Telegram */
+    background: #0088cc;
 }
 
 .social-btn.twitter {
-    background: #1da1f2; /* Azul do Twitter */
+    background: #1da1f2;
 }
 
 .social-btn.email {
-    background: #d93025; /* Vermelho do Gmail */
+    background: #d93025;
 }
 
+/* Hover nos botões */
 .social-btn:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
@@ -117,7 +103,7 @@
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     color: white;
-    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    background: linear-gradient(90deg, #858082, #b1b1b1);
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -127,7 +113,7 @@
 
 .easter-egg-btn:hover {
     transform: scale(1.1);
-    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    background: linear-gradient(90deg, #ffc60b, #857727);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -136,9 +122,9 @@
 /* Telas menores que 768px */
 @media (max-width: 768px) {
     .circle-video-container {
-        width: 150px;
-        height: 150px;
-        top: 100px;
+        width: 180px; /* Aumentado */
+        height: 180px; /* Aumentado */
+        top: 120px; /* Ajustado */
     }
 
     #circle {
@@ -147,41 +133,52 @@
     }
 
     .circle-title {
-        font-size: 35px;
+        font-size: 40px; /* Aumentado */
+    }
+
+    .social-buttons {
+        flex-wrap: wrap;
+        gap: 20px; /* Mais espaçamento */
     }
 
     .social-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+        width: 60px; /* Aumentado */
+        height: 60px; /* Aumentado */
+        font-size: 20px; /* Aumentado */
     }
 
     .easter-egg-btn {
-        font-size: 18px;
-        padding: 8px 20px;
+        font-size: 22px; /* Aumentado */
+        padding: 12px 25px; /* Mais espaçamento interno */
     }
 }
 
 /* Telas menores que 480px */
 @media (max-width: 480px) {
     .circle-video-container {
-        width: 120px;
-        height: 120px;
-        top: 80px;
+        width: 220px; /* Aumentado */
+        height: 220px; /* Aumentado */
+        top: 100px; /* Ajustado */
     }
 
     .circle-title {
-        font-size: 28px;
+        font-size: 45px; /* Aumentado */
+    }
+
+    .social-buttons {
+        flex-direction: column; /* Organizar botões em coluna */
+        align-items: center; /* Centralizar botões */
+        gap: 25px; /* Mais espaçamento entre os botões */
     }
 
     .social-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 18px;
+        width: 70px; /* Aumentado */
+        height: 70px; /* Aumentado */
+        font-size: 24px; /* Aumentado */
     }
 
     .easter-egg-btn {
-        font-size: 16px;
-        padding: 6px 15px;
+        font-size: 25px; /* Aumentado */
+        padding: 15px 30px; /* Mais espaçamento interno */
     }
 }
