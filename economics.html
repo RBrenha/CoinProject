@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$SHITDOG - Economics</title>
+    <title>Economics - $SHITDOG</title>
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/particle.css">
     <link rel="stylesheet" href="css/chartmain.css">
@@ -86,7 +86,69 @@
         </div>
     </div>
 
-
+    <div class="economics-container">
+        <h1 class="economics-title">💰 Token Economics</h1>
+        <p class="economics-description">
+            Discover the economic framework behind our token. Transparent, fair, and community-driven.
+        </p>
+    
+        <div class="economics-cards">
+            <!-- Total Supply Card -->
+            <div class="card">
+                <h2 class="card-title">🔢 Total Supply</h2>
+                <p class="card-value">1,000,000,000 TOKENS</p>
+                <p class="card-description">Maximum supply of tokens ever created.</p>
+            </div>
+    
+            <!-- Circulating Supply Card -->
+            <div class="card">
+                <h2 class="card-title">📊 Circulating Supply</h2>
+                <p class="card-value">700,000,000 TOKENS</p>
+                <p class="card-description">Currently available in the market.</p>
+            </div>
+    
+            <!-- Burned Tokens Card -->
+            <div class="card">
+                <h2 class="card-title">🔥 Burned Tokens</h2>
+                <p class="card-value">150,000,000 TOKENS</p>
+                <p class="card-description">Tokens permanently removed from supply.</p>
+            </div>
+        </div>
+    
+        <!-- Token Allocation Section -->
+        <div class="allocation-container">
+            <h2 class="allocation-title">Token Allocation</h2>
+            <div class="progress-bar">
+                <div class="progress-fill team" style="width: 20%;">Team 20%</div>
+                <div class="progress-fill community" style="width: 50%;">Community 50%</div>
+                <div class="progress-fill liquidity" style="width: 30%;">Liquidity 30%</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="charts-container">
+        <h1 class="charts-title">📊 Interactive Charts</h1>
+        <p class="charts-description">Explore detailed insights about the token's economics and performance through interactive charts.</p>
+        
+        <!-- Gráfico de Pizza -->
+        <div class="chart-box">
+            <h2 class="chart-title">Token Allocation</h2>
+            <canvas id="allocationChart"></canvas>
+        </div>
+    
+        <!-- Gráfico de Linha -->
+        <div class="chart-box">
+            <h2 class="chart-title">Price Evolution</h2>
+            <canvas id="priceChart"></canvas>
+        </div>
+    
+        <!-- Gráfico de Barras -->
+        <div class="chart-box">
+            <h2 class="chart-title">Monthly Transactions</h2>
+            <canvas id="transactionsChart"></canvas>
+        </div>
+    </div>
+    
 
 
 
@@ -120,4 +182,6 @@
     <script src="js/countdown.js"></script>
     <script src="js/menu.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/grafics.js"></script>
 </html>

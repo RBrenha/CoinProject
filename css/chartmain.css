@@ -186,7 +186,158 @@ body {
     transform: scale(1.1); /* Ampliação ao passar o mouse */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Sombra mais pronunciada */
 }
+/* General Styles */
+.economics-container {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
 
+/* Title and Description */
+.economics-title {
+    font-size: 32px;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.economics-description {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Card Styles */
+.economics-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    max-width: 30%;
+    text-align: center;
+    min-width: 200px;
+    color: white;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* Token Allocation Section */
+.allocation-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.allocation-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.progress-bar {
+    background-color: #333;
+    border-radius: 20px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #1a1a1a;
+}
+
+.progress-fill.team {
+    background-color: #4caf50;
+}
+
+.progress-fill.community {
+    background-color: #2196f3;
+}
+
+.progress-fill.liquidity {
+    background-color: #ff5722;
+}
+
+/* Container Geral */
+.charts-container {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Título da Seção */
+.charts-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.charts-description {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Estilos dos Gráficos */
+.chart-box {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.chart-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
 
 
 
