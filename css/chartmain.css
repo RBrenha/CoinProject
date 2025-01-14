@@ -504,10 +504,60 @@ canvas {
 
 
 
+    
 
 
 
 
+
+
+
+
+/* Container Principal */
+.buy-shitdog-container {
+    margin: 50px auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #1a1a1a; /* Fundo escuro */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Título */
+.buy-title {
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif; /* Fonte estilizada */
+    color: #ffffff; /* Branco */
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.buy-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Responsivo: quebra linha se necessário */
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre botões */
+}
+
+.buy-btn {
+    background: linear-gradient(90deg, #4caf50, #2196f3); /* Gradiente bonito */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+    padding: 12px 25px;
+    border-radius: 30px; /* Botões arredondados */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Hover Animations */
+.buy-btn:hover {
+    transform: scale(1.1); /* Aumenta suavemente no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+}
 
 .site-footer {
     background-color: #000000; /* Fundo escuro */
