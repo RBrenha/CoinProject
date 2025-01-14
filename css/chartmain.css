@@ -695,10 +695,6 @@ canvas {
 
 /* Adjustments for Tablets and Smaller Screens */
 @media (max-width: 768px) {
-    .pyramid-container chart {
-        width: 70vw;
-        height: 70vw;
-    }
 
     .menu-title {
         font-size: 36px;
@@ -724,14 +720,6 @@ canvas {
 
 /* Adjustments for Mobile Screens */
 @media (max-width: 480px) {
-    .pyramid-title {
-        font-size: 40px;
-    }
-
-    .pyramid-container info {
-        font-size: 0.9em;
-        margin-top: 15px;
-    }
 
     .menu-title {
         font-size: 28px;
