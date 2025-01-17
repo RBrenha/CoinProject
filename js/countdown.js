@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             buyButton.classList.add("enabled"); // Adiciona classe para estilo ativo
             buyButton.addEventListener("click", () => {
                 // Redireciona para o site
-                window.location.href = "https://pump.fun";
+                window.location.href = "https://pump.fun/coin/CjsTGK9UWosdmTc5kgWbDPA3JLAdQB57jRNkJBUNpump";
             });
             return;
         }
