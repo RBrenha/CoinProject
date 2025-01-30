@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    z-index: 100;
+}
+
+#nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-icon {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: -2.2em auto 0 0.2em;
+    transition: margin 600ms;
+    cursor: pointer;
+}
+
+.toggle-icon .bar {
+    display: block;
+    width: 3.8em;
+    height: 0.2em;
+    margin: 0.9em;
+    border-right: 2.8em solid #fff;
+    border-left: 0.6em solid #d6d6d6;
+    box-sizing: border-box;
+    transition-property: transform, margin, border-right-color, box-shadow;
+    transition-duration: 600ms;
+}
+
+.toggle-icon .bar:nth-of-type(1) {
+    transition: opacity 300ms;
+}
+
+.toggle-icon .bar:nth-of-type(2) {
+    transform: rotate(-180deg);
+}
+
+.pushed .toggle-icon {
+    margin: -3.2em 0 0 0.7em;
+}
+
+.pushed .bar:nth-of-type(1) {
+    opacity: 0;
+}
+
+.pushed .bar:nth-of-type(2) {
+    margin-left: 1.4em;
+    transform: rotate(-137deg) translateY(-1.5em);
+}
+
+.pushed .bar:nth-of-type(3) {
+    margin-left: 0.5em;
+    transform: rotate(-42deg);
+}
+
+.pushed .toggle-icon:hover .bar:nth-of-type(2) {
+    border-right-color: #e9b8b9;
+    box-shadow: 0.4em 0 0.6em 0.1em rgba(205, 40, 44, 0.75);
+}
+
+.pushed .toggle-icon:hover .bar:nth-of-type(3) {
+    border-right-color: #ddf1da;
+    box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65);
+}
+
+#buttons-container {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50px);
+    opacity: 0;
+    display: flex;
+    gap: 15px;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+#buttons-container.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    z-index: 100;
+}
+
+.btn-6 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 50px;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.btn-6:hover {
+    color: white;
+    background-color: #333;
+    border-color: white;
+}
+
+#home-button {
+    position: absolute;
+    top: 8px;
+    right: 25px;
+    font-size: 45px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 20;
+}
+
+#home-button:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+    #buttons-container {
+        flex-direction: column;
+    }
+}

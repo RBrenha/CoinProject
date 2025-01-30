@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - $SHITDOG</title>
-    <link rel="stylesheet" href="css/particle.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/gifimage.css">
+    <title>giveawat - $SHITDOG</title>
+
+    <link rel="stylesheet" href="css/giveawayCSS/menu.css">
+    <link rel="stylesheet" href="css/giveawayCSS/gifimage.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="imgs/iconweb.ico">
@@ -22,32 +23,56 @@
     <meta property="og:url" content="https://shitdog.live">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body>
+    <div id="animation-container"></div>
 
-            <header>
-                <div id="nav-container">
-                    <div class="toggle-icon">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div><!-- /toggle-icon -->
-                </div><!-- /nav-container -->
-                <a href="index.html" id="home-button">
-                    <i class="fas fa-home"></i>
-                </a>
-            </header>
-            <div id="buttons-container">
-                <div class="wrap"><a class="btn-6" href="aboutcoin.html">About Us</a></div>
-                <div class="wrap"><a class="btn-6" href="economics.html">Economics</a></div>
-                <div class="wrap"><a class="btn-6" href="contacts.html">Contacts</a></div>
+    <header>
+        <div id="nav-container">
+            <div class="toggle-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+        </div>
+        <a href="index.html" id="home-button">
+            <i class="fas fa-home"></i>
+        </a>
+    </header>
 
-    
-</body>
+    <div id="buttons-container">
+        <div class="wrap"><a class="btn-6" href="aboutcoin.html">About Us</a></div>
+        <div class="wrap"><a class="btn-6" href="economics.html">Economics</a></div>
+        <div class="wrap"><a class="btn-6" href="contacts.html">Contacts</a></div>
+    </div>
+
+    <div id="giveaway-form-container">
+        <h2>Participe do Sorteio!</h2>
+        <form id="giveaway-form">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="wallet">Carteira de Criptomoeda:</label>
+                <input type="text" id="wallet" name="wallet" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-6">Participar</button>
+            </div>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/animation.js"></script>
+</body>
 </html>
