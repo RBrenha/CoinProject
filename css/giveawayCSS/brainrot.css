@@ -1,0 +1,238 @@
+/* Estilos para o fundo e conteúdo */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    background: #000;
+    overflow-x: hidden; /* Permite rolagem vertical */
+}
+
+#brainrot-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle, #001f3f, #000);
+}
+
+#main-content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+#brainrot-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 0;
+    animation: glitch 1s infinite;
+}
+
+#brainrot-subtitle {
+    font-size: 1.5rem;
+    margin: 10px 0 30px;
+    opacity: 0.8;
+}
+
+#brainrot-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-brainrot {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+    background: #0074D9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-brainrot:hover {
+    background: #0056b3;
+}
+
+/* Estilos para o questionário */
+#quiz-section {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    max-width: 800px; /* Largura máxima para centralização */
+    margin: 0 auto; /* Centraliza o quiz */
+}
+
+#quiz-section h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    animation: glitch 1s infinite;
+}
+
+#quiz-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+#quiz-note {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #00ff00; /* Verde para destacar */
+}
+
+.quiz-group {
+    margin-bottom: 40px;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.quiz-group h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #0074D9;
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza as perguntas */
+}
+
+.question label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.question input {
+    width: 100%;
+    padding: 8px; /* Tamanho menor */
+    font-size: 1rem;
+    border: 2px solid #0074D9;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border-color 0.3s ease;
+    max-width: 300px; /* Largura menor */
+    margin: 0 auto; /* Centraliza as textboxes */
+}
+
+.question input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Estilos para os elementos "brainrot" */
+#brainrot-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 500;
+}
+
+.brainrot-text {
+    position: absolute;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.5;
+    animation: float 10s infinite;
+    white-space: nowrap; /* Evita quebras de linha */
+    animation-delay: calc(var(--i) * 2s); /* Atraso para cada texto */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-50vh) translateX(50vw);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Animação de glitch */
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px 0 cyan, -2px -2px 0 magenta;
+    }
+    25% {
+        text-shadow: -2px 2px 0 cyan, 2px -2px 0 magenta;
+    }
+    50% {
+        text-shadow: 2px -2px 0 cyan, -2px 2px 0 magenta;
+    }
+    75% {
+        text-shadow: -2px -2px 0 cyan, 2px 2px 0 magenta;
+    }
+    100% {
+        text-shadow: 2px 2px 0 cyan, -2px -2px 0 magenta;
+    }
+}
+
+/* Responsividade para mobile */
+@media screen and (max-width: 768px) {
+    #brainrot-title {
+        font-size: 2.5rem; /* Título menor */
+    }
+
+    #brainrot-subtitle {
+        font-size: 1.2rem; /* Subtítulo menor */
+    }
+
+    #brainrot-buttons {
+        flex-direction: column; /* Botões empilhados */
+        gap: 10px;
+    }
+
+    .btn-brainrot {
+        padding: 10px 20px; /* Botões menores */
+        font-size: 1rem;
+    }
+
+    #quiz-section h2 {
+        font-size: 2rem; /* Título do quiz menor */
+    }
+
+    #quiz-subtitle {
+        font-size: 1rem; /* Subtítulo do quiz menor */
+    }
+
+    #quiz-note {
+        font-size: 1rem; /* Nota menor */
+    }
+
+    .quiz-group h3 {
+        font-size: 1.5rem; /* Título das secções menor */
+    }
+
+    .question label {
+        font-size: 1rem; /* Labels menores */
+    }
+
+    .question input {
+        padding: 6px; /* Textboxes menores */
+        font-size: 0.9rem;
+        max-width: 100%; /* Largura total em mobile */
+    }
+
+    .brainrot-text {
+        font-size: 1.2rem; /* Textos "brainrot" menores */
+    }
+}

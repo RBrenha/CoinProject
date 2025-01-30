@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>giveawat - $SHITDOG</title>
+    <title>$SHITDOG - Join the Meme Revolution</title>
 
-    <link rel="stylesheet" href="css/giveawayCSS/menu.css">
-    <link rel="stylesheet" href="css/giveawayCSS/gifimage.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/giveawayCSS/brainrot.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
@@ -16,19 +16,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="imgs/iconweb-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imgs/iconweb-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <!-- Meta tags Open Graph -->
-    <meta property="og:title" content="$SHITDOG Official Site">
-    <meta property="og:description" content="The official site of $SHITDOG cryptocurrency! Come Check it out!">
-    <meta property="og:image" content="https://shitdog.live/imgs/banner.png">
-    <meta property="og:url" content="https://shitdog.live">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body>
-    <div id="animation-container"></div>
+    <!-- Animação de fundo -->
+    <div id="brainrot-background"></div>
 
+    <!-- Menu -->
     <header>
         <div id="nav-container">
             <div class="toggle-icon">
@@ -42,37 +37,104 @@
         </a>
     </header>
 
-    <div id="buttons-container">
-        <div class="wrap"><a class="btn-6" href="aboutcoin.html">About Us</a></div>
-        <div class="wrap"><a class="btn-6" href="economics.html">Economics</a></div>
-        <div class="wrap"><a class="btn-6" href="contacts.html">Contacts</a></div>
+    <!-- Conteúdo principal -->
+    <div id="main-content">
+        <h1 id="brainrot-title">JOIN THE $SHITDOG REVOLUTION</h1>
+        <p id="brainrot-subtitle">The meme coin that will change the game. Forever.</p>
+        <div id="brainrot-buttons">
+            <a href="login.html" class="btn-brainrot">LOGIN</a>
+            <a href="#quiz-section" class="btn-brainrot">QUIZZ</a>
+        </div>
     </div>
 
-    <div id="giveaway-form-container">
-        <h2>Participe do Sorteio!</h2>
-        <form id="giveaway-form">
-            <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="wallet">Carteira de Criptomoeda:</label>
-                <input type="text" id="wallet" name="wallet" required>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn-6">Participar</button>
-            </div>
-        </form>
-    </div>
+<!-- Secção do Questionário -->
+<section id="quiz-section">
+    <h2>Test Your Solana Knowledge</h2>
+    <p id="quiz-subtitle">Prove you're a true Solana degen. No wrong answers... or are there?</p>
+    <p id="quiz-note">Win up to one Solana by completing this quiz!</p>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <!-- Formulário com redirecionamento para a página de login -->
+    <form id="quiz-form" action="login.html" method="GET">
+        <!-- Secção 1: Basics -->
+        <div class="quiz-group">
+            <h3>Basics</h3>
+            <div class="question">
+                <label for="q1">1. What is Solana's consensus mechanism called?</label>
+                <input type="text" id="q1" name="q1" required>
+            </div>
+            <div class="question">
+                <label for="q2">2. What is the native token of Solana?</label>
+                <input type="text" id="q2" name="q2" required>
+            </div>
+            <div class="question">
+                <label for="q3">3. What is the maximum TPS (Transactions Per Second) Solana can handle?</label>
+                <input type="text" id="q3" name="q3" required>
+            </div>
+            <div class="question">
+                <label for="q4">4. Who is the founder of Solana?</label>
+                <input type="text" id="q4" name="q4" required>
+            </div>
+        </div>
+
+        <!-- Secção 2: Advanced -->
+        <div class="quiz-group">
+            <h3>Advanced</h3>
+            <div class="question">
+                <label for="q5">5. What is the name of Solana's parallel processing technology?</label>
+                <input type="text" id="q5" name="q5" required>
+            </div>
+            <div class="question">
+                <label for="q6">6. What is the block time of Solana?</label>
+                <input type="text" id="q6" name="q6" required>
+            </div>
+            <div class="question">
+                <label for="q7">7. What is the name of Solana's decentralized exchange (DEX) aggregator?</label>
+                <input type="text" id="q7" name="q7" required>
+            </div>
+            <div class="question">
+                <label for="q8">8. What is the name of Solana's token standard (similar to ERC-20)?</label>
+                <input type="text" id="q8" name="q8" required>
+            </div>
+        </div>
+
+        <!-- Secção 3: Ecosystem -->
+        <div class="quiz-group">
+            <h3>Ecosystem</h3>
+            <div class="question">
+                <label for="q9">9. What is the name of Solana's wallet commonly used by developers?</label>
+                <input type="text" id="q9" name="q9" required>
+            </div>
+            <div class="question">
+                <label for="q10">10. What is the name of Solana's mainnet beta launch date?</label>
+                <input type="text" id="q10" name="q10" required>
+            </div>
+            <div class="question">
+                <label for="q11">11. What is the name of Solana's programming language for smart contracts?</label>
+                <input type="text" id="q11" name="q11" required>
+            </div>
+            <div class="question">
+                <label for="q12">12. What is the name of Solana's flagship NFT marketplace?</label>
+                <input type="text" id="q12" name="q12" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-brainrot">Submit</button>
+    </form>
+</section>
+
+<!-- Mais elementos "brainrot" -->
+<div id="brainrot-elements">
+    <div class="brainrot-text">MONEY 💰</div>
+    <div class="brainrot-text">REWARDS 🏆</div>
+    <div class="brainrot-text">SOLANA 🔥</div>
+    <div class="brainrot-text">CASH 💵</div>
+    <div class="brainrot-text">QUIZZ 🧠</div>
+    <div class="brainrot-text">FREE 🎁</div>
+    <div class="brainrot-text">WIN 🚀</div>
+</div>
+
+    <!-- Scripts -->
     <script src="js/menu.js"></script>
-    <script src="js/animation.js"></script>
+    <script src="js/giveaway/brainrot.js"></script>
 </body>
 </html>
