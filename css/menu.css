@@ -117,8 +117,6 @@ header {
 button {
     text-decoration: none; /* Remove sublinhado */
     display: block; /* Garante que o link preencha toda a área */
-    width: 100%; /* Preenche a largura do botão */
-    height: 100%; /* Preenche a altura do botão */
 }
 
 a
