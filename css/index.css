@@ -13,6 +13,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background: black;
+	overflow: hidden; /* Remove scroll */
 }
 
 /* Estilização dos botões no topo */
@@ -255,4 +256,53 @@ span {
 	100% {
 		filter: brightness(0.8) contrast(1.3);
 	}
+}
+
+
+/* Responsividade para telemóveis */
+@media (max-width: 800px) {
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden; /* Remove o scroll apenas em telas pequenas */
+    }
+
+    .top-buttons {
+        flex-direction: column; /* Botões em coluna */
+        align-items: center;
+        gap: 10px;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn-top {
+        width: 90%; /* Botão ocupa 90% da largura da tela */
+        max-width: 200px;
+        height: 40px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container {
+        width: 90%; /* Ajusta o tamanho da container */
+        height: auto;
+    }
+
+    .backgroundImage, .boyImage {
+        max-width: 100%;
+        height: auto;
+    }
+
+    p {
+        font-size: 1.5em; /* Texto menor em telas pequenas */
+    }
 }
