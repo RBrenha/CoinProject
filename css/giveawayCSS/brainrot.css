@@ -236,3 +236,58 @@ body {
         font-size: 1.2rem; /* Textos "brainrot" menores */
     }
 }
+
+/* Estilos para a tabela de vencedores */
+#winners-section {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#winners-section h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    animation: glitch 1s infinite;
+}
+
+#winners-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+#winners-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#winners-table th,
+#winners-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#winners-table th {
+    background: #0074D9;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+#winners-table td {
+    font-size: 0.9rem;
+}
+
+#winners-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}

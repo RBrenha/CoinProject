@@ -22,21 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const quizForm = document.getElementById("quiz-form");
     quizForm.addEventListener("submit", function (event) {
         event.preventDefault(); // Evita o envio real do formulário
-        window.location.href = "thank-you.html"; // Redireciona para outra página
+        window.location.href = "login.html"; // Redireciona para outra página
     });
 
     // Adiciona textos "brainrot" flutuantes
     const brainrotContainer = document.getElementById("brainrot-elements");
-    const texts = [
-        "MONEY 💰",
-        "REWARDS 🏆",
-        "SOLANA 🔥",
-        "CASH 💵",
-        "QUIZZ 🧠",
-        "FREE 🎁",
-        "WIN 🚀"
-    ];
-    
+    const texts = ["MONEY 💰", "REWARDS 🏆", "SOLANA 🔥", "CASH 💵", "QUIZZ 🧠", "FREE 🎁", "WIN 🚀"];
+
     // Cria múltiplas instâncias de cada texto
     texts.forEach((text, index) => {
         for (let i = 0; i < 5; i++) { // 5 instâncias de cada texto
@@ -50,4 +42,47 @@ document.addEventListener("DOMContentLoaded", function () {
             brainrotContainer.appendChild(element);
         }
     });
+
+    // Função para gerar nomes de utilizadores aleatórios
+    function generateRandomName() {
+        const names = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank", "Grace", "Hank", "Ivy", "Jack"];
+        return names[Math.floor(Math.random() * names.length)];
+    }
+
+    // Função para gerar ganhos aleatórios em SOL (até 1 SOL)
+    function generateRandomEarnings() {
+        return (Math.random() * 1).toFixed(4); // 4 casas decimais
+    }
+
+    // Preenche a tabela de vencedores com dados aleatórios
+    const winnersTable = document.querySelector("#winners-table tbody");
+    for (let i = 0; i < 10; i++) { // 10 linhas na tabela
+        const row = document.createElement("tr");
+        const userCell = document.createElement("td");
+        const earningsCell = document.createElement("td");
+
+        userCell.textContent = generateRandomName();
+        earningsCell.textContent = generateRandomEarnings();
+
+        row.appendChild(userCell);
+        row.appendChild(earningsCell);
+        winnersTable.appendChild(row);
+    }
+
+    // Atualiza a tabela a cada 5 segundos
+    setInterval(() => {
+        winnersTable.innerHTML = ""; // Limpa a tabela
+        for (let i = 0; i < 10; i++) { // Adiciona novos dados
+            const row = document.createElement("tr");
+            const userCell = document.createElement("td");
+            const earningsCell = document.createElement("td");
+
+            userCell.textContent = generateRandomName();
+            earningsCell.textContent = generateRandomEarnings();
+
+            row.appendChild(userCell);
+            row.appendChild(earningsCell);
+            winnersTable.appendChild(row);
+        }
+    }, 5000); // Atualiza a cada 5 segundos
 });
